@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Add this line */
+  }
+  
+  .warning-box {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: white;
+    z-index: 3;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    width: 80vw; /* Adjust the width to your preference */
+    max-width: 400px; /* Set a maximum width to prevent excessive stretching */
+    border: 2px solid white;
+    padding: 20px; /* Adjust the padding to your preference */
+    border-radius: 10px;
+    word-wrap: break-word; /* Enable text wrapping */
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: scale(1, 1.5);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+  }
+  
+  #blur {
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Change position to fixed */
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .material-symbols-outlined {
+    animation: blink 1s infinite;
+    background: linear-gradient(to right, rgb(255, 70, 70), rgb(239, 108, 82));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    zoom: 5;
+  }
+  
+  #download-btn {
+    background-color: rgba(100, 100, 100, 0.25);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.5s;
+  }
+
+  #download-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  #view-btn {
+    background-color: rgba(100, 100, 100, 0.25);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.5s;
+  }
+
+  #view-btn:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .download-box {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: white;
+    z-index: 3;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    border: 2px solid white;
+    padding: 20px; /* Adjust the padding to your preference */
+    border-radius: 10px;
+    word-wrap: break-word; /* Enable text wrapping */
+    background-color: rgba(100, 100, 100, 0.25);
+  }
