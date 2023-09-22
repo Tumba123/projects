@@ -135,3 +135,21 @@ body {
   .mailto {
     color: white;
   }
+
+.project-links {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: white;
+  z-index: 3;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  border: 2px solid white;
+  padding: 20px; /* Adjust the padding to your preference */
+  border-radius: 10px;
+  word-wrap: break-word; /* Enable text wrapping */
+  background-color: rgba(100, 100, 100, 0.25);
+}
+
+a {
+  color:white;
+}
